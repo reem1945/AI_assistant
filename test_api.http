@@ -1,0 +1,11 @@
+### Tester l'API de transcription
+POST http://localhost:5000/transcribe
+Content-Type: multipart/form-data
+Accept: application/json
+
+--boundary
+Content-Disposition: form-data; name="audio"; filename="doctor_patient_conversation.wav"
+Content-Type: audio/wav
+
+< ./doctor_patient_conversation.wav
+--boundary--
